@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Side Navigation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      display: flex;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 240px;
+      height: 100vh;
+      background-color: #1e293b;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid #334155;
+      z-index: 1000;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      margin-bottom: 12px;
+      background-color: #ffffff;
+    }
+
+    .profile h2 {
+      font-size: 1.1rem;
+      color: #f8fafc;
+    }
+
+    .profile p {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      list-style: none;
+      width: 100%;
+    }
+
+    .nav-links li {
+      margin-bottom: 10px;
+    }
+
+    .nav-links a {
+      display: block;
+      text-decoration: none;
+      color: #cbd5e1;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #38bdf8;
+      color: #0f172a;
+      font-weight: bold;
+    }
+
+    .main-content {
+      margin-left: 240px;
+      padding: 40px;
+      width: 100%;
+    }
+
+    section {
+      min-height: 100vh;
+      padding-top: 20px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    section h1 {
+      font-size: 2rem;
+      color: #38bdf8;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        position: sticky;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        border-right: none;
+        border-bottom: 1px solid #334155;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+        text-align: left;
+      }
+
+      .profile img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .nav-links li {
+        margin-bottom: 0;
+      }
+
+      .nav-links a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+      }
+
+      .main-content {
+        margin-left: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <div class="profile">
+      <img src="jc.jpg" alt="Profile Photo">
+      <div>
+        <h2>John Carlon Rango</h2>
+        <p>BSIT Student</p>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section id="about">
+      <h1>About Me</h1>
+      <p>Hi! I'm John Carlon Rango, a BSIT student currently at the early stage of my journey in technology. Right now, I am focused on building a strong foundation in programming logic, problem solving, and web development. I don't claim to be an expert yet instead, I treat every class activity, small script, and experiment as a chance to learn how things work behind the scenes. I enjoy testing ideas, fixing errors as I go, and turning simple concepts into working programs step by step. This portfolio is a record of my growth as a student, the skills I am actively practicing, and the projects I am gradually building as I prepare for bigger challenges in IT.</p>
+    </section>
+
+    <section id="skills">
+      <h1>Skills & Tech Stack</h1>
+      <p>I currently practice programming fundamentals in C++, Java, and Python alongside basic web development using HTML and CSS. I also use Git and GitHub for version control, Bash and Linux/Termux for command-line work, and tools like Supabase, Godot, and Max2D as I continue learning how to troubleshoot errors and build small projects.</p>
+    </section>
+
+    <section id="projects">
+      <h1>Projects</h1>
+        <img src="ip.jpg" alt="Profile Photo" height="400px" width="300px">
+      <p>My first simple project.</p>
+    </section>
+
+    <section id="education">
+      <h1>Education & Training</h1>
+      <p>I am currently pursuing a Bachelor of Science in Information Technology (BSIT) at Colegio de Montalban, where I am building my foundation in C++ programming, computing fundamentals, and problem-solving. Before college, I graduated from the TVL-ICT strand at San Jose Litex Senior High School, where I learned basic Java programming and worked on a research study about a Digital Student Medical Record System.
+I also completed a 160-hour Work Immersion in the computer laboratory at San Jose National High School, gaining practical experience in lab operations and basic technical support. Alongside my formal schooling, I continue learning on my own through structured coding modules on Sololearn and hands-on practice with Linux/Termux, scripting, and web basics..</p>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <p>✉️Email: johncarlonrango409@gmail.com</p>
+       <br>
+       <br>
+       <p>📞Contact number: 09617824796</p>
+    </section>
+  </main>
+
+</body>
+</html>
